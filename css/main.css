@@ -184,6 +184,18 @@ body {
   margin-top: -0.5em;
   right: 0.5em; }
 
+.hero-main {
+  position: relative;
+  padding: 4em 10%;
+  background: #001641;
+  color: white; }
+  .hero-main h1 {
+    text-align: left;
+    font-size: 4em;
+    margin: 0 0 25px; }
+  .hero-main ul {
+    list-style: none; }
+
 .component {
   margin: 0 auto;
   position: relative;
