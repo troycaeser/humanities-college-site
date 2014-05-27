@@ -520,7 +520,7 @@ footer {
   left: 19%;
   width: 30%;
   height: 30px;
-  bottom: -155px;
+  bottom: 0;
   background-color: white;
   -webkit-transform: skew(55deg);
   -moz-transform: skew(55deg);
@@ -535,7 +535,7 @@ footer {
   right: 19%;
   width: 30%;
   height: 30px;
-  bottom: -155px;
+  bottom: 0;
   background-color: white;
   -webkit-transform: skew(-55deg);
   -moz-transform: skew(-55deg);
@@ -549,9 +549,9 @@ footer {
   pointer-events: none;
   z-index: 9999999999;
   left: 0;
-  width: 20%;
+  width: 30%;
   height: 30px;
-  bottom: -155px;
+  bottom: 0;
   background-color: white; }
 
 .section_rectangles::after {
@@ -559,9 +559,9 @@ footer {
   content: "";
   pointer-events: none;
   right: 0;
-  width: 20%;
+  width: 30%;
   height: 30px;
-  bottom: -155px;
+  bottom: 0;
   background-color: white; }
 
 section::before,
