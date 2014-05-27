@@ -32,7 +32,8 @@ body {
     color: #001641; }
   .big_nav .nav_logo {
     width: 45%;
-    display: inline; }
+    display: inline;
+    margin: 0 25px 0 0; }
     .big_nav .nav_logo h1 {
       display: inline-block;
       margin: 0 auto;
