@@ -1,4 +1,6 @@
 (function() {
+	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+
 	var support = { animations : Modernizr.cssanimations },
 		animEndEventNames = {
 			'WebkitAnimation' : 'webkitAnimationEnd',

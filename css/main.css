@@ -22,6 +22,8 @@ body {
       float: right;
       display: inline;
       padding: 10px 10px 0 5px; }
+    .tiny_nav ul a {
+      color: white; }
 
 .big_nav {
   width: 100%;
@@ -46,12 +48,140 @@ body {
         font-size: 20px; }
       .big_nav .nav_logo div h4 {
         font-size: 11px; }
-  .big_nav ul {
-    list-style: none;
-    display: inline; }
-    .big_nav ul li {
-      display: inline;
-      padding: 0 10px 0 10px; }
+
+/* reset  list style */
+.big_nav_menu,
+.big_nav_menu ul {
+  list-style: none; }
+
+/* set menu position change here to set to relative or float, etc. */
+.big_nav_menu {
+  display: inline;
+  position: relative;
+  z-index: 1002;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize; }
+
+/* first level menu items */
+.big_nav_menu > li {
+  display: inline-block;
+  margin: 0;
+  position: relative; }
+
+.big_nav_menu > li > a {
+  line-height: 4em;
+  padding: 0 0.3em;
+  font-size: 1.2em;
+  display: block;
+  color: black; }
+
+.big_nav_menu > li > a:hover,
+.big_nav_menu > li > a:active {
+  color: #02639d; }
+
+/* sumbenu with transitions */
+.cbp-tm-submenu {
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  text-align: left;
+  pointer-events: none;
+  -webkit-transition: visibility 0s, opacity 0s;
+  -moz-transition: visibility 0s, opacity 0s;
+  transition: visibility 0s, opacity 0s; }
+
+.cbp-tm-show .cbp-tm-submenu {
+  width: 16em;
+  left: 50%;
+  margin: 0 0 0 -8em;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  -webkit-transition: visibility 0s, opacity 0.3s;
+  -moz-transition: visibility 0s, opacity 0.3s;
+  transition: visibility 0s, opacity 0.3s; }
+
+.cbp-tm-show-above .cbp-tm-submenu {
+  bottom: 100%;
+  padding-bottom: 10px; }
+
+.cbp-tm-show-below .cbp-tm-submenu {
+  top: 100%;
+  padding-top: 10px; }
+
+/* extreme cases: not enough space on the sides */
+.cbp-tm-nospace-right .cbp-tm-submenu {
+  right: 0;
+  left: auto; }
+
+.cbp-tm-nospace-left .cbp-tm-submenu {
+  left: 0; }
+
+/* last menu item has to fit on the screen */
+.big_nav_menu > li:last-child .cbp-tm-submenu {
+  right: 0; }
+
+.cbp-tm-submenu:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.cbp-tm-show-above .cbp-tm-submenu:after {
+  top: 100%;
+  margin-top: -10px; }
+
+.cbp-tm-show-below .cbp-tm-submenu:after {
+  bottom: 100%;
+  margin-bottom: -10px; }
+
+.cbp-tm-submenu:after {
+  border-color: transparent;
+  border-width: 16px;
+  margin-left: -16px;
+  left: 50%; }
+
+.cbp-tm-show-above .cbp-tm-submenu:after {
+  border-top-color: white; }
+
+.cbp-tm-show-below .cbp-tm-submenu:after {
+  border-bottom-color: white; }
+
+.cbp-tm-submenu > li {
+  display: block;
+  background: white;
+  opacity: 1; }
+
+.cbp-tm-submenu > li > a {
+  padding: 5px 2.3em 5px 0.6em;
+  display: block;
+  font-size: 1.2em;
+  position: relative;
+  color: #47a3da;
+  border: 4px solid white;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s; }
+
+.cbp-tm-submenu > li > a:hover,
+.cbp-tm-submenu > li > a:active {
+  color: white;
+  background: #47a3da; }
+
+.cbp-tm-submenu li a:before {
+  position: absolute;
+  top: 50%;
+  margin-top: -0.5em;
+  right: 0.5em; }
 
 .component {
   margin: 0 auto;
