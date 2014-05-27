@@ -203,6 +203,7 @@ body {
 
 .component-fullwidth {
   width: 100%;
+  max-width: 100%;
   height: 600px;
   background: #333333; }
 
@@ -479,10 +480,10 @@ footer {
   content: "";
   pointer-events: none;
   z-index: 9999999999;
-  left: -20px;
-  width: 50%;
+  left: 19%;
+  width: 30%;
   height: 30px;
-  top: 570px;
+  bottom: -155px;
   background-color: white;
   -webkit-transform: skew(55deg);
   -moz-transform: skew(55deg);
@@ -494,16 +495,37 @@ footer {
   position: absolute;
   content: "";
   pointer-events: none;
-  right: -20px;
-  width: 50%;
+  right: 19%;
+  width: 30%;
   height: 30px;
-  top: 570px;
+  bottom: -155px;
   background-color: white;
   -webkit-transform: skew(-55deg);
   -moz-transform: skew(-55deg);
   -o-transform: skew(-55deg);
   -ms-transform: skew(-55deg);
   transform: skew(-55deg); }
+
+.section_rectangles::before {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  z-index: 9999999999;
+  left: 0;
+  width: 20%;
+  height: 30px;
+  bottom: -155px;
+  background-color: white; }
+
+.section_rectangles::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  right: 0;
+  width: 20%;
+  height: 30px;
+  bottom: -155px;
+  background-color: white; }
 
 section::before,
 section::after {
