@@ -1,7 +1,19 @@
 $wireframebg: #fff
 $wireframefg: #001641
 $testcolor: #00a478
- 
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+=border-radius-separate-corners($tl, $tr, $bl, $br)
+	-webkit-border-radius: $tl $tr $bl $br
+	-moz-border-radius: $tl $tr $bl $br
+	-ms-border-radius: $tl $tr $bl $br
+	border-radius: $tl $tr $bl $br
+
 @font-face
 	font-family: "fontawesome"
 	src: url('../fonts/fontawesome/fontawesome.eot?-ulzwqn')
@@ -160,9 +172,11 @@ body
 
 .cbp-tm-show-above .cbp-tm-submenu:after
 	border-top-color: #fff
+	// opacity: 0
 
 .cbp-tm-show-below .cbp-tm-submenu:after
 	border-bottom-color: #fff
+	// opacity: 0
 
 .cbp-tm-submenu > li
 	display: block
@@ -175,10 +189,17 @@ body
 	font-size: 1.2em
 	position: relative
 	color: #47a3da
-	border: 4px solid #fff
+	//border: 4px solid #fff
 	-webkit-transition: all 0.2s
 	-moz-transition: all 0.2s
 	transition: all 0.2s
+	+border-radius(20px)
+
+.cbp-tm-submenu > li:first-child
+	+border-radius-separate-corners(20px, 20px, 0, 0)
+
+.cbp-tm-submenu > li:last-child
+	+border-radius-separate-corners(0, 0, 20px, 20px)
 
 .cbp-tm-submenu > li > a:hover,
 .cbp-tm-submenu > li > a:active
@@ -441,11 +462,28 @@ a.next::before
 	ul
 		list-style: none
 
-=border-radius($radius)
-	-webkit-border-radius: $radius
-	-moz-border-radius: $radius
-	-ms-border-radius: $radius
-	border-radius: $radius
+.side_menu
+	position:relative
+	padding: 3em 10%
+	background: $wireframebg
+	color: $wireframefg
+
+.ca-menu
+	padding: 0
+	margin: 0
+	width: 200px
+	li
+		width: 100%
+		height: auto
+		overflow: hidden
+		display: block
+		background: #fff
+		margin: 0 0 10px 0
+		padding: 12px
+		border-top: 1px solid #000
+		border-left: 1px solid #000
+		border-bottom: 1px solid #000
+		transition: all 300ms ease-in-out
 
 .nav_courses
 	.thumbnail_link
