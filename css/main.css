@@ -298,22 +298,19 @@ body {
   transform: translateY(-50%); }
 
 .component-fullwidth nav a {
-  top: 100%;
+  position: absolute;
+  top: 600px;
   margin-top: 25px;
-  left: 50%;
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%); }
+  left: 50%; }
 
 .component-fullwidth nav a.prev {
-  margin: -22em 0 0 -55em; }
+  margin: -22em 0 0 -40%; }
 
 .component-fullwidth nav a.next {
-  margin: -22em 0 0 50em; }
+  margin: -22em 0 0 30%; }
 
 .component nav a::before {
   position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   line-height: 60px;
   height: 100%;
