@@ -517,7 +517,7 @@ footer {
   left: 19%;
   width: 30%;
   height: 30px;
-  bottom: 0;
+  bottom: -5px;
   background-color: white;
   -webkit-transform: skew(55deg);
   -moz-transform: skew(55deg);
@@ -532,7 +532,7 @@ footer {
   right: 19%;
   width: 30%;
   height: 30px;
-  bottom: 0;
+  bottom: -5px;
   background-color: white;
   -webkit-transform: skew(-55deg);
   -moz-transform: skew(-55deg);
@@ -548,7 +548,7 @@ footer {
   left: 0;
   width: 30%;
   height: 30px;
-  bottom: 0;
+  bottom: -5px;
   background-color: white; }
 
 .section_rectangles::after {
@@ -558,7 +558,7 @@ footer {
   right: 0;
   width: 30%;
   height: 30px;
-  bottom: 0;
+  bottom: -5px;
   background-color: white; }
 
 section::before,
