@@ -2,6 +2,21 @@ $wireframebg: #fff
 $wireframefg: #001641
 $testcolor: #00a478
 
+@mixin device_length($device)
+	@if $device == smartphone
+		@media (min-width: 320px)
+			@content
+		@media (min-width: 480px)
+	@else if $device == tablet
+		@media (min-width: 768px)
+			@content
+		@media (min-width: 1024px)
+	@else if $device == desk
+		@media (min-width: 1224px)
+			@content
+	@else if $device == big_desk
+		@media (min-width: 1824px)
+
 =border-radius($radius)
 	-webkit-border-radius: $radius
 	-moz-border-radius: $radius
@@ -23,9 +38,6 @@ $testcolor: #00a478
 
 body
 	background: $wireframebg
-
-.container
-	width: 980px
 
 .tiny_nav
 	background: $wireframefg
@@ -473,17 +485,38 @@ a.next::before
 		width: 100%
 		height: auto
 		overflow: hidden
-		display: block
-		background: #fff
 		margin: 0 0 10px 0
-		padding: 12px
-		border-top: 1px solid #000
-		border-left: 1px solid #000
-		border-bottom: 1px solid #000
 		transition: all 300ms ease-in-out
+		a
+			display: block
+			margin: 0 10px
+			padding: 10px
+			background: $testcolor
+
+.ca-menu > li > a::before
+	display: inline-block
+	position: absolute
+	content: ''
+	width: 0 
+	height: 0
+	border-top: 20px solid transparent
+	border-bottom: 20px solid transparent
+	border-right: 20px solid $testcolor
+	border-left: 0 solid transparent
+	margin: -10px 0 0 -30px
+
+.ca-menu > li > a:hover::before
+	border-top: 20px solid transparent
+	border-bottom: 20px solid transparent
+	border-right: 20px solid $testcolor
+	border-left: 0 solid transparent
 
 .nav_courses
+	display: block
+	background: $testcolor
 	.thumbnail_link
+		position: relative
+		list-style: none
 		float: left
 		margin: 50px 30px 0 20px
 		padding: 0 20px
