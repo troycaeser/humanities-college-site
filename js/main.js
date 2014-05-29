@@ -3,10 +3,10 @@ $(document).ready(function() {
 	$(window).scroll(function(){
 		var current_scroll_position = $(this).scrollTop();
 
-		if(current_scroll_position > 120){
+		if(current_scroll_position > 30){
 			$('.big_nav').addClass('big_nav_shrink');
 		}
-		else if(current_scroll_position < 120){
+		else if(current_scroll_position < 30){
 			$('.big_nav').removeClass('big_nav_shrink');
 		}
 	});
