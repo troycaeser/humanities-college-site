@@ -1,4 +1,51 @@
-(function() {
+$(document).ready(function() {
+
+	$(window).scroll(function(){
+		var current_scroll_position = $(this).scrollTop();
+
+		if(current_scroll_position > 120){
+			$('.big_nav').addClass('big_nav_shrink');
+		}
+		else if(current_scroll_position < 120){
+			$('.big_nav').removeClass('big_nav_shrink');
+		}
+	});
+
+	// 	var cbpAnimatedHeader = (function() {
+	 
+	//     var docElem = document.documentElement,
+	//         header = document.querySelector( '.cbp-af-header' ),
+	//         didScroll = false,
+	//         changeHeaderOn = 300;
+	 
+	//     function init() {
+	//         window.addEventListener( 'scroll', function( event ) {
+	//             if( !didScroll ) {
+	//                 didScroll = true;
+	//                 setTimeout( scrollPage, 250 );
+	//             }
+	//         }, false );
+	//     }
+	 
+	//     function scrollPage() {
+	//         var sy = scrollY();
+	//         if ( sy >= changeHeaderOn ) {
+	//             classie.add( header, 'cbp-af-header-shrink' );
+	//         }
+	//         else {
+	//             classie.remove( header, 'cbp-af-header-shrink' );
+	//         }
+	//         didScroll = false;
+	//     }
+	 
+	//     function scrollY() {
+	//         return window.pageYOffset || docElem.scrollTop;
+	//     }
+	 
+	//     init();
+	 
+	// })();
+
 	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
 
 	var support = { animations : Modernizr.cssanimations },
@@ -98,4 +145,4 @@
 	}
 
 	init();
-})();
+});

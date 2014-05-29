@@ -54,8 +54,19 @@ body
 
 
 .big_nav
+	position: fixed
+	z-index: 999999999
 	width: 100%
-	background: $wireframebg
+	height: 100px
+	background: $testcolor
+	overflow: hidden
+	-webkit-transition: 0.4s
+	-moz-transition: 0.4s
+	transition: 0.4s
+	.big_nav_inner
+		width: 90%
+		max-width: 69em
+		margin: 0 auto
 	h1, h3, h4, a
 		color: $wireframefg
 	.nav_logo
@@ -77,6 +88,19 @@ body
 				font-size: 20px
 			h4
 				font-size: 11px
+
+.big_nav_shrink
+	height: 90px
+	-webkit-transform: translate(0, -3em)
+	-moz-transform: translate(0, -3em)
+	-o-transform: translate(0, -3em)
+	-ms-transform: translate(0, -3em)
+	transform: translate(0, -3em)
+	h1, h3, h4, a
+		-webkit-transition: all 0.3s
+		-moz-transition: all 0.3s
+		transition: all 0.3s
+		line-height: 1
 
 /* reset  list style */
 .big_nav_menu,
@@ -223,6 +247,7 @@ body
 
 .hero-main
 	position: relative
+	margin: 4em 0
 	padding: 4em 10%
 	background: $wireframefg
 	color: $wireframebg
@@ -481,6 +506,8 @@ a.next::before
 	padding: 0
 	margin: 0
 	width: 200px
+	display: block
+	background: #000
 	li
 		width: 100%
 		height: auto
@@ -491,9 +518,11 @@ a.next::before
 			display: block
 			margin: 0 10px
 			padding: 10px
+		a.ca-header
 			background: $testcolor
+			color: #000
 
-.ca-menu > li > a::before
+.ca-menu > li > a.ca-header::before
 	display: inline-block
 	position: absolute
 	content: ''
@@ -501,15 +530,15 @@ a.next::before
 	height: 0
 	border-top: 20px solid transparent
 	border-bottom: 20px solid transparent
-	border-right: 20px solid $testcolor
-	border-left: 0 solid transparent
-	margin: -10px 0 0 -30px
+	border-right: 0 solid transparent
+	border-left: 20px solid $testcolor
+	margin: -10px 0 0 170px
 
-.ca-menu > li > a:hover::before
+.ca-menu > li > a.ca-header:hover::before
 	border-top: 20px solid transparent
 	border-bottom: 20px solid transparent
-	border-right: 20px solid $testcolor
-	border-left: 0 solid transparent
+	border-right: 0 solid transparent
+	border-left: 20px solid $testcolor
 
 .nav_courses
 	display: block

@@ -20,8 +20,19 @@ body {
       color: white; }
 
 .big_nav {
+  position: fixed;
+  z-index: 999999999;
   width: 100%;
-  background: white; }
+  height: 100px;
+  background: #00a478;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s; }
+  .big_nav .big_nav_inner {
+    width: 90%;
+    max-width: 69em;
+    margin: 0 auto; }
   .big_nav h1, .big_nav h3, .big_nav h4, .big_nav a {
     color: #001641; }
   .big_nav .nav_logo {
@@ -43,6 +54,19 @@ body {
         font-size: 20px; }
       .big_nav .nav_logo div h4 {
         font-size: 11px; }
+
+.big_nav_shrink {
+  height: 90px;
+  -webkit-transform: translate(0, -3em);
+  -moz-transform: translate(0, -3em);
+  -o-transform: translate(0, -3em);
+  -ms-transform: translate(0, -3em);
+  transform: translate(0, -3em); }
+  .big_nav_shrink h1, .big_nav_shrink h3, .big_nav_shrink h4, .big_nav_shrink a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    line-height: 1; }
 
 /* reset  list style */
 .big_nav_menu,
@@ -195,6 +219,7 @@ body {
 
 .hero-main {
   position: relative;
+  margin: 4em 0;
   padding: 4em 10%;
   background: #001641;
   color: white; }
@@ -430,7 +455,9 @@ a.next::before {
 .ca-menu {
   padding: 0;
   margin: 0;
-  width: 200px; }
+  width: 200px;
+  display: block;
+  background: black; }
   .ca-menu li {
     width: 100%;
     height: auto;
@@ -440,10 +467,12 @@ a.next::before {
     .ca-menu li a {
       display: block;
       margin: 0 10px;
-      padding: 10px;
-      background: #00a478; }
+      padding: 10px; }
+    .ca-menu li a.ca-header {
+      background: #00a478;
+      color: black; }
 
-.ca-menu > li > a::before {
+.ca-menu > li > a.ca-header::before {
   display: inline-block;
   position: absolute;
   content: "";
@@ -451,15 +480,15 @@ a.next::before {
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 20px solid #00a478;
-  border-left: 0 solid transparent;
-  margin: -10px 0 0 -30px; }
+  border-right: 0 solid transparent;
+  border-left: 20px solid #00a478;
+  margin: -10px 0 0 170px; }
 
-.ca-menu > li > a:hover::before {
+.ca-menu > li > a.ca-header:hover::before {
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 20px solid #00a478;
-  border-left: 0 solid transparent; }
+  border-right: 0 solid transparent;
+  border-left: 20px solid #00a478; }
 
 .nav_courses {
   display: block;
