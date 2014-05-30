@@ -8,6 +8,7 @@ $(document).ready(function() {
 		}
 		else if(current_scroll_position < 30){
 			$('.big_nav').removeClass('big_nav_shrink');
+			$('li').removeClass('active');
 		}
 	});
 

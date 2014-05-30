@@ -15,7 +15,7 @@
 
 	<script src="js/modernizr.custom.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#target_nav">
 	<header class="tiny_nav">
 		<nav class="container">
 			<ul>
@@ -25,7 +25,7 @@
 		</nav>
 	</header>
 	<header class="big_nav">
-		<nav class="container">
+		<nav id="target_nav" class="container big_nav_inner">
 			<div class="nav_logo">
 				<h1>朝陽</h1>
 				<div>
@@ -33,7 +33,7 @@
 					<h4>College of Humanities and Social Sciences</h4>
 				</div>
 			</div>
-			<ul id="cbp-tm-menu" class="big_nav_menu">
+			<ul id="cbp-tm-menu" class="big_nav_menu nav">
 				<li>
 					<a href="about.html">關於人文</a>
 					<ul class="cbp-tm-submenu">

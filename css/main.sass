@@ -81,7 +81,7 @@ body
 		h1
 			display: inline-block
 			margin: 0 auto
-			line-height: 2.5
+			line-height: 1.5
 			font-size: 50px
 		div
 			display: inline-block
@@ -93,6 +93,8 @@ body
 				font-size: 20px
 			h4
 				font-size: 11px
+	.nav
+		display: inline-block
 
 .big_nav_shrink
 	-webkit-transform: translate(0, -3em)
@@ -100,10 +102,15 @@ body
 	-o-transform: translate(0, -3em)
 	-ms-transform: translate(0, -3em)
 	transform: translate(0, -3em)
-	h1, h3, h4, a
-		-webkit-transition: all 0.3s
-		-moz-transition: all 0.3s
-		transition: all 0.3s
+	.nav_logo
+		display: block
+		margin: 0 auto
+		h1
+			line-height: 1
+			font-size: 60px
+		h3, h4
+			visibility: hidden
+			display: none
 
 /* reset  list style */
 .big_nav_menu,
@@ -116,12 +123,14 @@ body
 	position: relative
 	z-index: 1002
 	bottom: 0
-	width: 100%
-	background: $wireframebg
-	text-align: right
+	//width: 100%
+	background: $testcolor
+	text-align: center
 	padding: 0
 	margin: 0
 	text-transform: capitalize
+	.active
+		background: $wireframebg
 
 /* first level menu items */
 .big_nav_menu > li
@@ -209,11 +218,9 @@ body
 
 .cbp-tm-show-above .cbp-tm-submenu:after
 	border-top-color: #fff
-	// opacity: 0
 
 .cbp-tm-show-below .cbp-tm-submenu:after
 	border-bottom-color: #fff
-	// opacity: 0
 
 .cbp-tm-submenu > li
 	display: block
@@ -221,6 +228,7 @@ body
 	opacity: 1
 
 .cbp-tm-submenu > li > a
+	z-index: 1002
 	padding: 10px /* top/bottom paddings in 'em' cause a tiny "jump" in Chrome on Win */
 	display: block
 	font-size: 1.2em
@@ -261,7 +269,7 @@ body
 		list-style: none
 
 .pictures
-	margin: 4em 0 0 0
+	margin: 6em 0 0 0
 
 .component
 	margin: 0 auto
