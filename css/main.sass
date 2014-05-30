@@ -37,18 +37,21 @@ $testcolor: #00a478
 	font-style: normal
 
 body
-	background: $wireframebg
+	background: $wireframefg
 
 .tiny_nav
+	position: relative
+	margin: 0
+	padding: 10px 0 10px 0
+	display: block
 	background: $wireframefg
 	ul
-		height: 30px
 		list-style: none
 
 		li
 			float: right
 			display: inline
-			padding: 10px 10px 0 5px
+			padding: 0 5px 0 5px
 		a
 			color: $wireframebg
 
@@ -223,7 +226,6 @@ body
 	font-size: 1.2em
 	position: relative
 	color: #47a3da
-	//border: 4px solid #fff
 	-webkit-transition: all 0.2s
 	-moz-transition: all 0.2s
 	transition: all 0.2s
@@ -257,6 +259,9 @@ body
 		margin: 0 0 25px
 	ul
 		list-style: none
+
+.pictures
+	margin: 4em 0 0 0
 
 .component
 	margin: 0 auto

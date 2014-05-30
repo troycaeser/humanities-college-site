@@ -5,17 +5,20 @@
   font-weight: normal;
   font-style: normal; }
 body {
-  background: white; }
+  background: #001641; }
 
 .tiny_nav {
+  position: relative;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  display: block;
   background: #001641; }
   .tiny_nav ul {
-    height: 30px;
     list-style: none; }
     .tiny_nav ul li {
       float: right;
       display: inline;
-      padding: 10px 10px 0 5px; }
+      padding: 0 5px 0 5px; }
     .tiny_nav ul a {
       color: white; }
 
@@ -229,6 +232,9 @@ body {
     margin: 0 0 25px; }
   .hero-main ul {
     list-style: none; }
+
+.pictures {
+  margin: 4em 0 0 0; }
 
 .component {
   margin: 0 auto;
