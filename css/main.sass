@@ -17,6 +17,11 @@ $testcolor: #00a478
 	@else if $device == big_desk
 		@media (min-width: 1824px)
 
+=transform($translate)
+	-webkit-transform: translateY($translate)
+	-ms-transform: translateY($translate)
+	transform: translateY($translate)
+
 =border-radius($radius)
 	-webkit-border-radius: $radius
 	-moz-border-radius: $radius
@@ -55,7 +60,6 @@ body
 		a
 			color: $wireframebg
 
-
 .big_nav
 	position: fixed
 	display: block
@@ -65,9 +69,9 @@ body
 	height: auto
 	text-align: center
 	background: $testcolor
-	-webkit-transition: 0.3s
-	-moz-transition: 0.3s
-	transition: 0.3s
+	-webkit-transition: 0.3s ease-in-out
+	-moz-transition: 0.3s ease-in-out
+	transition: 0.3s ease-in-out
 	.big_nav_inner
 		width: 90%
 		max-width: 69em
@@ -103,11 +107,11 @@ body
 	-ms-transform: translate(0, -3em)
 	transform: translate(0, -3em)
 	.nav_logo
-		display: block
-		margin: 0 auto
+		// display: block
+		// margin: 0 auto
 		h1
 			line-height: 1
-			font-size: 60px
+			//font-size: 60px
 		h3, h4
 			visibility: hidden
 			display: none
@@ -509,17 +513,22 @@ a.next::before
 	ul
 		list-style: none
 
-.side_menu
+.main_content
 	position:relative
 	padding: 3em 10%
 	background: $wireframebg
 	color: $wireframefg
 
+.side_menu
+	display: inline-block
+	position: absolute
+	width: 150px
+
 .ca-menu
 	padding: 0
 	margin: 0
-	width: 200px
-	display: block
+	width: 100%
+	display: inline-block
 	background: #000
 	li
 		width: 100%
@@ -545,7 +554,7 @@ a.next::before
 	border-bottom: 20px solid transparent
 	border-right: 0 solid transparent
 	border-left: 20px solid $testcolor
-	margin: -10px 0 0 170px
+	margin: -10px 0 0 180px
 
 .ca-menu > li > a.ca-header:hover::before
 	border-top: 20px solid transparent
@@ -569,6 +578,11 @@ a.next::before
 			height: 100px
 			background: $wireframefg
 			+border-radius(20px)
+
+.articles
+	display: inline-block
+	position: relative
+	margin: 0 0 0 20%
 
 footer
 	background: $wireframefg
