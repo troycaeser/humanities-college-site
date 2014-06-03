@@ -15,7 +15,7 @@
 
 	<script src="js/modernizr.custom.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#target_nav">
 	<header class="tiny_nav">
 		<nav class="container">
 			<ul>
@@ -25,7 +25,7 @@
 		</nav>
 	</header>
 	<header class="big_nav">
-		<nav class="container big_nav_inner">
+		<nav id="target_nav" class="container big_nav_inner">
 			<div class="nav_logo">
 				<h1>朝陽</h1>
 				<div>
@@ -33,9 +33,9 @@
 					<h4>College of Humanities and Social Sciences</h4>
 				</div>
 			</div>
-			<ul id="cbp-tm-menu" class="big_nav_menu">
+			<ul id="cbp-tm-menu" class="big_nav_menu nav">
 				<li>
-					<a href="#">關於人文</a>
+					<a href="#sec1">關於人文</a>
 					<ul class="cbp-tm-submenu">
 						<li><a href="#">學院簡介</a></li>
 						<li><a href="#">學院成員</a></li>
@@ -44,7 +44,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#">系所導覽</a>
+					<a href="#sec2">系所導覽</a>
 					<ul class="cbp-tm-submenu">
 						<li><a href="#">傳播藝術系</a></li>
 						<li><a href="#">應用英語系</a></li>
@@ -53,7 +53,7 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#">特色教學</a>
+					<a href="#sec3">特色教學</a>
 					<ul class="cbp-tm-submenu">
 						<li><a href="#">共同核心課程</a></li>
 						<li><a href="#">人文閱讀</a></li>
@@ -82,7 +82,7 @@
 	</header>
 	<section class="hero-main">
 		<div class="container">
-			<h1>關於人文</h1>
+			<h1 id="breadcrumb">關於人文</h1>
 		</div>
 	</section>
 
@@ -143,7 +143,7 @@
 			</aside>
 
 			<article class="articles">
-				<h1>hello world</h1>
+				<h1 class="post" id="sec1">heading 1</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
@@ -153,6 +153,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
+				<h1 class="post" id="sec2">heading 2</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
@@ -160,6 +161,7 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
+				<h1 class="post" id="sec3">heading 3</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, quam optio asperiores amet sequi sunt excepturi accusantium doloribus fuga nam nihil atque consequatur maxime aliquid odio enim debitis libero hic tenetur inventore mollitia dolorem aperiam laborum quia labore ex quaerat repellat quas nobis reprehenderit ipsam saepe consequuntur a ducimus autem!</p>
