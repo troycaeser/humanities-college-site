@@ -46,10 +46,14 @@ body
 
 .tiny_nav
 	position: relative
+	top: 0
 	margin: 0
 	padding: 10px 0 10px 0
 	display: block
 	background: $wireframefg
+	-webkit-transition: 0.3s ease-in-out
+	-moz-transition: 0.3s ease-in-out
+	transition: 0.3s ease-in-out
 	ul
 		list-style: none
 
@@ -60,8 +64,14 @@ body
 		a
 			color: $wireframebg
 
-.big_nav
+.tiny_nav_shrink
 	position: fixed
+	width: 100%
+	height: auto
+	z-index: 1002
+
+.big_nav
+	position: relative
 	display: block
 	padding: 20px
 	z-index: 1000
@@ -101,12 +111,10 @@ body
 		display: inline-block
 
 .big_nav_shrink
-	-webkit-transform: translate(0, -3em)
-	-moz-transform: translate(0, -3em)
-	-o-transform: translate(0, -3em)
-	-ms-transform: translate(0, -3em)
-	transform: translate(0, -3em)
+	position: fixed
+	margin: 10px 0 0 0
 	padding: 0
+	top: 2em
 	.nav_logo
 		// display: block
 		// margin: 0 auto
@@ -262,7 +270,7 @@ body
 	right: 0.5em
 
 .hero-main
-	position: fixed
+	position: relative
 	display: block
 	width: 100%
 	padding: 10em 0 2em 0
@@ -280,12 +288,9 @@ body
 		list-style: none
 
 .hero-main-shrink
-	-webkit-transform: translate(0, -3em)
-	-moz-transform: translate(0, -3em)
-	-o-transform: translate(0, -3em)
-	-ms-transform: translate(0, -3em)
-	transform: translate(0, -3em)
-	padding: 6em 0 0 0
+	position: fixed
+	top: 6em
+	padding: 2em 0 0 0
 	h1
 		text-align: center
 		font-size: 15px
@@ -532,11 +537,13 @@ a.next::before
 		list-style: none
 
 .main_content
-	position:relative
-	margin: 15% 0
+	position: relative
 	padding: 3em 10%
 	background: $wireframebg
 	color: $wireframefg
+
+.main_content_slideUp
+	margin: 15% 0
 
 .side_menu
 	display: inline-block

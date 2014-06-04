@@ -2,14 +2,19 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		var current_scroll_position = $(this).scrollTop();
+		var big_nav_scroll_position = $('.big_nav').offset().top;
 
-		if(current_scroll_position > 30){
+		if(current_scroll_position > 10){
+			$('.tiny_nav').addClass('tiny_nav_shrink');
 			$('.big_nav').addClass('big_nav_shrink');
 			$('.hero-main').addClass('hero-main-shrink')
+			$('.main_content').addClass('main_content_slideUp');
 		}
-		else if(current_scroll_position < 30){
+		else if(current_scroll_position < 10){
+			$('.tiny_nav').removeClass('tiny_nav_shrink');
 			$('.big_nav').removeClass('big_nav_shrink');
 			$('.hero-main').removeClass('hero-main-shrink');
+			$('.main_content').removeClass('main_content_slideUp');
 			$('li').removeClass('active');
 		}
 
