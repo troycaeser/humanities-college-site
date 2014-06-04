@@ -6,10 +6,12 @@ $(document).ready(function(){
 		//this line initiates the dropdown element menu, only after this big_nav.html is loaded.
 		var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
 
-		$('a').click(function(e){
+		$('li > a').click(function(e){
 			e.preventDefault();
 			var page = $(this).attr('id');
-			$('.articles').load('includes/' + page + '.html');
+			if(typeof page != "undefined"){
+				$('.articles').load('includes/' + page + '.html');
+			}
 		});
 	});
 	$('.side_menu').load('includes/side_menu.html');
