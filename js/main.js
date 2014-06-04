@@ -26,7 +26,7 @@ $(document).ready(function() {
 		$('.breadcrumb_links').each(function(){
 			if(current_scroll_position >= $(this).offset().top && current_scroll_position <= $(this).next().offset().top)
 			{
-				$('#breadcrumb').html('stuff > more >> ' + $(this).html());
+				$('#breadcrumb_append').html('stuff > more >> ' + $(this).html());
 				// $('#breadcrumb').html($(this).offset().top);
 
 				return; //break the loop
