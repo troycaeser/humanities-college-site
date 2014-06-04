@@ -2,9 +2,6 @@ $(document).ready(function() {
 
 	$(window).scroll(function(){
 		var current_scroll_position = $(this).scrollTop();
-		var section_one = $('#sec1').offset().top;
-		var section_two = $('#sec2').offset().top;
-		var section_three = $('#sec3').offset().top;
 
 		if(current_scroll_position > 30){
 			$('.big_nav').addClass('big_nav_shrink');
