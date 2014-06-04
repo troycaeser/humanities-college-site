@@ -60,6 +60,8 @@ $(document).ready(function() {
 		//changeEffect();
 		navNext.addEventListener( 'click', function( ev ) { ev.preventDefault(); navigate( 'next' ); } );
 		navPrev.addEventListener( 'click', function( ev ) { ev.preventDefault(); navigate( 'prev' ); } );
+
+		window.setInterval(function(){navigate( 'next' )}, 5000);
 		//effectSel.addEventListener( 'change', changeEffect );
 	}
 
