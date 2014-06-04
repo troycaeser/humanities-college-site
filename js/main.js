@@ -23,11 +23,11 @@ $(document).ready(function() {
 
 		// var pos = $('#breadcrumb').offset();
 		// alert(pos);
-		$('.post').each(function(){
+		$('.breadcrumb_links').each(function(){
 			if(current_scroll_position >= $(this).offset().top && current_scroll_position <= $(this).next().offset().top)
 			{
-				// $('#breadcrumb').html('stuff > more >> ' + $(this).html());
-				$('#breadcrumb').html($(this).offset().top);
+				$('#breadcrumb').html('stuff > more >> ' + $(this).html());
+				// $('#breadcrumb').html($(this).offset().top);
 
 				return; //break the loop
 			}
