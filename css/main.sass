@@ -2,6 +2,36 @@ $wireframebg: #fff
 $wireframefg: #001641
 $testcolor: #00a478
 
+$body_bg: #fff
+$tiny_nav_bg: #009346
+$tiny_nav_fg: #fff
+
+$big_nav_bg: #fff
+$big_nav_hover: #22AC38
+$big_nav_default: #006934
+
+$big_nav_dropdown_fg_default: #006934
+$big_nav_dropdown_fg_hover: #fff
+$big_nav_dropdown_bg_hover: #00A4E4
+$big_nav_dropdown_bg_default: #fff
+
+$pictures_lines: #fff
+
+$news_bg: #fff
+$news_fg: #003F15
+
+$footer_bg: #009346
+
+$dropshadow: #000
+
+$sidemenu_header_fg: #fff
+$sidemenu_default: #006934
+$sidemenu_hover: #22AC38
+$sidemenu_lines: #22AC38
+
+$dropshadow: #000
+
+
 @mixin device_length($device)
 	@if $device == smartphone
 		@media (min-width: 320px)
@@ -42,7 +72,7 @@ $testcolor: #00a478
 	font-style: normal
 
 body
-	background: $wireframefg
+	background: $body_bg
 
 .tiny_nav
 	position: relative
@@ -50,7 +80,7 @@ body
 	margin: 0
 	padding: 10px 0 10px 0
 	display: block
-	background: $wireframefg
+	background: $tiny_nav_bg
 	-webkit-transition: 0.3s ease-in-out
 	-moz-transition: 0.3s ease-in-out
 	transition: 0.3s ease-in-out
@@ -60,9 +90,9 @@ body
 		li
 			float: right
 			display: inline
-			padding: 0 5px 0 5px
+			padding: 0 15px 0 15px
 		a
-			color: $wireframebg
+			color: $tiny_nav_fg
 
 .tiny_nav_shrink
 	position: fixed
@@ -78,7 +108,7 @@ body
 	width: 100%
 	height: auto
 	text-align: center
-	background: $testcolor
+	background: $big_nav_bg
 	-webkit-transition: 0.3s ease-in-out
 	-moz-transition: 0.3s ease-in-out
 	transition: 0.3s ease-in-out
@@ -87,7 +117,7 @@ body
 		max-width: 69em
 		margin: 0 auto
 	h1, h3, h4, a
-		color: $wireframefg
+		color: $big_nav_default
 	.nav_logo
 		width: 45%
 		display: inline
@@ -137,7 +167,6 @@ body
 	z-index: 1002
 	bottom: 0
 	//width: 100%
-	background: $testcolor
 	text-align: center
 	padding: 0
 	margin: 0
@@ -156,11 +185,11 @@ body
 	padding: 0 0.3em
 	font-size: 1.2em
 	display: block
-	color: #000
+	color: $big_nav_default
 
 .big_nav_menu > li > a:hover,
 .big_nav_menu > li > a:active
-	color: #02639d
+	color: $big_nav_hover
 
 /* sumbenu with transitions */
 .cbp-tm-submenu
@@ -188,11 +217,11 @@ body
 	transition: visibility 0s, opacity 0.3s
 
 .cbp-tm-show-above .cbp-tm-submenu
-	bottom: 100%
+	bottom: 70%
 	padding-bottom: 10px
 
 .cbp-tm-show-below .cbp-tm-submenu
-	top: 100%
+	top: 70%
 	padding-top: 10px
 
 /* extreme cases: not enough space on the sides */
@@ -207,38 +236,41 @@ body
 .big_nav_menu > li:last-child .cbp-tm-submenu
 	right: 0
 
-.cbp-tm-submenu:after
-	border: solid transparent
-	content: " "
-	height: 0
-	width: 0
-	position: absolute
-	pointer-events: none
+// .cbp-tm-submenu:after
+// 	border: solid transparent
+// 	content: " "
+// 	height: 0
+// 	width: 0
+// 	position: absolute
+// 	pointer-events: none
 
-.cbp-tm-show-above .cbp-tm-submenu:after
-	top: 100%
-	margin-top: -10px
+// .cbp-tm-show-above .cbp-tm-submenu:after
+// 	top: 100%
+// 	margin-top: -10px
 
-.cbp-tm-show-below .cbp-tm-submenu:after
-	bottom: 100%
-	margin-bottom: -10px
+// .cbp-tm-show-below .cbp-tm-submenu:after
+// 	bottom: 100%
+// 	margin-bottom: -10px
 
-.cbp-tm-submenu:after
-	border-color: transparent
-	border-width: 16px
-	margin-left: -16px
-	left: 50%
+// .cbp-tm-submenu:after
+// 	border-color: transparent
+// 	border-width: 16px
+// 	margin-left: -16px
+// 	left: 50%
 
-.cbp-tm-show-above .cbp-tm-submenu:after
-	border-top-color: #fff
+// .cbp-tm-show-above .cbp-tm-submenu:after
+// 	border-top-color: #fff
 
-.cbp-tm-show-below .cbp-tm-submenu:after
-	border-bottom-color: #fff
+// .cbp-tm-show-below .cbp-tm-submenu:after
+// 	border-bottom-color: #fff
 
 .cbp-tm-submenu > li
 	display: block
-	background: #fff
+	background: $big_nav_dropdown_bg_default
 	opacity: 1
+	-moz-box-shadow:    3px 8px 6px $dropshadow
+	-webkit-box-shadow: 3px 8px 6px $dropshadow
+	box-shadow:         3px 8px 6px $dropshadow
 
 .cbp-tm-submenu > li > a
 	z-index: 1002
@@ -246,7 +278,7 @@ body
 	display: block
 	font-size: 1.2em
 	position: relative
-	color: #47a3da
+	color: $big_nav_dropdown_fg_default
 	-webkit-transition: all 0.2s
 	-moz-transition: all 0.2s
 	transition: all 0.2s
@@ -258,16 +290,17 @@ body
 .cbp-tm-submenu > li:last-child
 	+border-radius-separate-corners(0, 0, 20px, 20px)
 
+
 .cbp-tm-submenu > li > a:hover,
 .cbp-tm-submenu > li > a:active
-	color: #fff
-	background: #47a3da
+	color: $big_nav_dropdown_fg_hover
+	background: $big_nav_dropdown_bg_hover
 
-.cbp-tm-submenu li a:before
-	position: absolute
-	top: 50%
-	margin-top: -0.5em
-	right: 0.5em
+// .cbp-tm-submenu li a:before
+// 	position: absolute
+// 	top: 50%
+// 	margin-top: -0.5em
+// 	right: 0.5em
 
 .hero-main
 	position: relative
@@ -354,24 +387,47 @@ body
 	display: block
 	max-width: 100%
 
-.lines
+.lines, .lines_top, .lines_bottom
 	color: $wireframebg
 	position: absolute
 	z-index: 1001
 
+.lines_top, .lines_bottom
+	-moz-box-shadow:    6px 3px 4px $dropshadow
+	-webkit-box-shadow: 6px 3px 4px $dropshadow
+	box-shadow:         6px 3px 4px $dropshadow
+
 .component-fullwidth .lines
 	width: 25%
 	height: auto
-	border-top: 2px solid $wireframebg
-	border-bottom: 2px solid $wireframebg
 	left: 20%
 	top: 40%
 
-.component-fullwidth li span
-	font-size: 4em
+.component-fullwidth .lines_top
+	width: 25%
+	height: 2px
+	left: 20%
+	top: 40%
+	background: $pictures_lines
+
+.component-fullwidth .lines_bottom
+	width: 25%
+	height: 2px
+	left: 20%
+	bottom: 42%
+	background: $pictures_lines
+
+.component-fullwidth li h3
+	font-size: 3em
+	-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.7)
+	-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7)
+	text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.7)
 
 .component-fullwidth li p
 	font-size: 2em
+	-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.7)
+	-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7)
+	text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.7)
 
 .component-fullwidth li img
 	min-width: 100%
@@ -405,9 +461,15 @@ body
 
 .component-fullwidth nav a.prev
 	margin: -22em 0 0 -40%
+	-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.7)
+	-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7)
+	text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.7)
 
 .component-fullwidth nav a.next
 	margin: -22em 0 0 30%
+	-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.7)
+	-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.7)
+	text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.7)
 
 .component nav a::before
 	position: absolute
@@ -536,18 +598,20 @@ a.next::before
 .news
 	position: relative
 	padding: 3em 10%
-	background: $wireframebg
-	color: $wireframefg
+	background: $news_bg
+	color: $news_fg
 	h2
 		text-align: center
 		margin: 0 0 25px
+		-moz-text-shadow:    2px 2px 2px rgba(63,107,169, 0.55)
+		-webkit-text-shadow: 2px 2px 2px rgba(63,107,169, 0.55)
+		text-shadow:         2px 2px 2px rgba(63,107,169, 0.55)
 	ul
 		list-style: none
 
 .main_content
 	position: relative
 	padding: 3em 10%
-	background: $wireframebg
 	color: $wireframefg
 
 .main_content_slideUp
@@ -563,7 +627,6 @@ a.next::before
 	margin: 0
 	width: 100%
 	display: inline-block
-	background: #000
 	li
 		width: 100%
 		height: auto
@@ -577,18 +640,23 @@ a.next::before
 		a.ca-header
 			background: $testcolor
 			color: #000
+			border: 2px solid #000
 
 .ca-menu > li > a.ca-header::before
 	display: inline-block
 	position: absolute
 	content: ''
-	width: 0 
-	height: 0
-	border-top: 20px solid transparent
-	border-bottom: 20px solid transparent
-	border-right: 0 solid transparent
-	border-left: 20px solid $testcolor
-	margin: -10px 0 0 120px
+	background: $testcolor
+	width: 28px
+	height: 28px
+	border: 2px solid #fff
+	// border-top: 20px solid transparent
+	// border-bottom: 20px solid transparent
+	// border-right: 0 solid transparent
+	// border-left: 20px solid $testcolor
+	-webkit-transform: rotate(45deg)
+	margin: -4px 0 0 106px
+	box-shadow: 10% 1px 6px rgba(0,0,0,0.3)
 
 .ca-menu > li > a.ca-header:hover::before
 	border-top: 20px solid transparent
@@ -637,14 +705,7 @@ a.next::before
 	+border-radius(50%)
 
 footer
-	background: $wireframefg
-	.socials
-		width: 100%
-		height: auto
-		padding: 70px 0 20px 0
-	.stripe
-		padding: 2px 0 2px
-		background: $wireframebg
+	background: $footer_bg
 	.container
 		span
 			margin: 6px
@@ -703,7 +764,7 @@ footer
 	left: 19%
 	width: 30%
 	height: 30px
-	bottom: -5px
+	bottom: 0px
 	background-color: $wireframebg
 	+skewTransform(55deg)
 
@@ -714,7 +775,7 @@ footer
 	right: 19%
 	width: 30%
 	height: 30px
-	bottom: -5px
+	bottom: 0px
 	background-color: $wireframebg
 	+skewTransform(-55deg)
 
@@ -726,7 +787,7 @@ footer
 	left: 0
 	width: 30%
 	height: 30px
-	bottom: -5px
+	bottom: 0px
 	background-color: $wireframebg
 
 .section_rectangles::after
@@ -736,7 +797,7 @@ footer
 	right: 0
 	width: 30%
 	height: 30px
-	bottom: -5px
+	bottom: 0px
 	background-color: $wireframebg
 
 section::before,
