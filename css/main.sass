@@ -613,6 +613,8 @@ a.next::before
 	position: relative
 	padding: 3em 10%
 	color: $wireframefg
+	.container
+		padding: 0
 
 .main_content_slideUp
 	margin: 15% 0
@@ -620,7 +622,7 @@ a.next::before
 .side_menu
 	display: inline-block
 	position: absolute
-	width: 150px
+	width: 170px
 
 .ca-menu
 	padding: 0
@@ -637,32 +639,24 @@ a.next::before
 			display: block
 			margin: 0 10px
 			padding: 10px
+			border-bottom: 1px solid rgba(0, 0, 0, 0.7)
 		a.ca-header
-			background: $testcolor
-			color: #000
-			border: 2px solid #000
+			width: 170px
+			height: 50px
+			background: url(../img/side_menu_header.jpg) no-repeat
+			background-size: 95%
+			color: $sidemenu_header_fg
+			border-bottom: none
 
-.ca-menu > li > a.ca-header::before
-	display: inline-block
-	position: absolute
-	content: ''
-	background: $testcolor
-	width: 28px
-	height: 28px
-	border: 2px solid #fff
-	// border-top: 20px solid transparent
-	// border-bottom: 20px solid transparent
-	// border-right: 0 solid transparent
-	// border-left: 20px solid $testcolor
-	-webkit-transform: rotate(45deg)
-	margin: -4px 0 0 106px
-	box-shadow: 10% 1px 6px rgba(0,0,0,0.3)
+.ca-header li a span,
+.ca-menu li a span
+	padding: 0 0 0 10px
 
-.ca-menu > li > a.ca-header:hover::before
-	border-top: 20px solid transparent
-	border-bottom: 20px solid transparent
-	border-right: 0 solid transparent
-	border-left: 20px solid $testcolor
+// .ca-menu > li > a.ca-header:hover::before
+// 	border-top: 20px solid transparent
+// 	border-bottom: 20px solid transparent
+// 	border-right: 0 solid transparent
+// 	border-left: 20px solid $testcolor
 
 .nav_courses
 	display: block
@@ -711,14 +705,7 @@ a.next::before
 
 footer
 	background: $footer_bg
-	.container
-		span
-			margin: 6px
-			display: inline-block
-			width: 50px
-			height: 50px
-			background: $testcolor
-			+border-radius(10px)
+	padding: 2em 0
 	.nav_logo
 		color: $wireframebg
 		width: 45%
@@ -742,11 +729,17 @@ footer
 		float: right
 		color: $wireframebg
 		font-size: 11px
+		-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.8)
+		-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8)
+		text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.8)
 
 	.copyright_details
 		margin: 50px 0 10px 0
 		color: $wireframebg
 		font-size: 10px
+		-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.8)
+		-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8)
+		text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.8)
 
 =transform($xpercent, $deg)
 	-webkit-transform: translateX($xpercent) rotate($deg)

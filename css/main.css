@@ -493,6 +493,8 @@ a.next::before {
   position: relative;
   padding: 3em 10%;
   color: #001641; }
+  .main_content .container {
+    padding: 0; }
 
 .main_content_slideUp {
   margin: 15% 0; }
@@ -500,7 +502,7 @@ a.next::before {
 .side_menu {
   display: inline-block;
   position: absolute;
-  width: 150px; }
+  width: 170px; }
 
 .ca-menu {
   padding: 0;
@@ -516,29 +518,19 @@ a.next::before {
     .ca-menu li a {
       display: block;
       margin: 0 10px;
-      padding: 10px; }
+      padding: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.7); }
     .ca-menu li a.ca-header {
-      background: #00a478;
-      color: black;
-      border: 2px solid black; }
+      width: 170px;
+      height: 50px;
+      background: url(../img/side_menu_header.jpg) no-repeat;
+      background-size: 95%;
+      color: white;
+      border-bottom: none; }
 
-.ca-menu > li > a.ca-header::before {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  background: #00a478;
-  width: 28px;
-  height: 28px;
-  border: 2px solid white;
-  -webkit-transform: rotate(45deg);
-  margin: -4px 0 0 106px;
-  box-shadow: 10% 1px 6px rgba(0, 0, 0, 0.3); }
-
-.ca-menu > li > a.ca-header:hover::before {
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 0 solid transparent;
-  border-left: 20px solid #00a478; }
+.ca-header li a span,
+.ca-menu li a span {
+  padding: 0 0 0 10px; }
 
 .nav_courses {
   display: block;
@@ -592,17 +584,8 @@ a.next::before {
   border-radius: 50%; }
 
 footer {
-  background: #009346; }
-  footer .container span {
-    margin: 6px;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    background: #00a478;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    border-radius: 10px; }
+  background: #009346;
+  padding: 2em 0; }
   footer .nav_logo {
     color: white;
     width: 45%;
@@ -625,11 +608,17 @@ footer {
   footer .contact_details {
     float: right;
     color: white;
-    font-size: 11px; }
+    font-size: 11px;
+    -moz-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
+    -webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8); }
   footer .copyright_details {
     margin: 50px 0 10px 0;
     color: white;
-    font-size: 10px; }
+    font-size: 10px;
+    -moz-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
+    -webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8); }
 
 .section_triangles::before {
   position: absolute;
