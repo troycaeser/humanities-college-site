@@ -11,6 +11,7 @@ body {
   position: relative;
   top: 0;
   margin: 0;
+  z-index: 999;
   padding: 10px 0 10px 0;
   display: block;
   background: #009346;
@@ -207,13 +208,14 @@ body {
   position: relative;
   display: block;
   width: 100%;
-  padding: 2em 0 2em 0;
-  z-index: 999;
-  background: black;
+  padding: 5em 0 2em 0;
+  z-index: 990;
+  background: -webkit-linear-gradient(#006934 -10%, #22ac38, #006934 110%);
   color: white;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out; }
+  transition: 0.3s ease-in-out;
+  overflow: hidden; }
   .hero-main h1 {
     text-align: left;
     font-size: 4em;
@@ -223,19 +225,25 @@ body {
   .hero-main p {
     display: none;
     visibility: hidden; }
+  .hero-main .container {
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 0 0 25px 0; }
 
 .hero-main-shrink {
-  position: fixed;
-  top: 6em;
-  padding: 2em 0 0 0; }
-  .hero-main-shrink h1 {
-    display: none;
-    visibility: hidden; }
-  .hero-main-shrink p {
-    visibility: visible;
-    display: block;
-    text-align: center;
-    font-size: 15px; }
+  position: relative;
+  top: 8em;
+  padding: 2em 0 2em 0; }
+
+.stripes {
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+  height: 17em;
+  background: repeating-linear-gradient(-45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+  margin-right: 20px;
+  right: 0;
+  top: 0; }
 
 .pictures {
   margin: 0; }
@@ -497,7 +505,7 @@ a.next::before {
     padding: 0; }
 
 .main_content_slideUp {
-  margin: 15% 0; }
+  margin: 7em 0; }
 
 .side_menu {
   display: inline-block;
@@ -513,7 +521,6 @@ a.next::before {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin: 0 0 10px 0;
     transition: all 300ms ease-in-out; }
     .ca-menu li a {
       display: block;
@@ -525,7 +532,7 @@ a.next::before {
       color: #22ac38; }
     .ca-menu li a.ca-header {
       width: 170px;
-      height: 50px;
+      height: auto;
       background: url(../img/side_menu_header.jpg) no-repeat;
       background-size: 95%;
       padding: 12px 0 12px 6px;
@@ -565,6 +572,13 @@ a.next::before {
   display: inline-block;
   position: relative;
   margin: 0 0 0 20%; }
+  .articles h1 {
+    color: #006934;
+    -moz-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5); }
+  .articles p {
+    color: #006934; }
 
 .person {
   margin: 10px 0 25px 0; }

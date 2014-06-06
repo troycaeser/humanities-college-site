@@ -18,20 +18,20 @@ $(document).ready(function() {
 			$('li').removeClass('active');
 		}
 
-		var stuff = $('.post').text();
+		// var stuff = $('.post').text();
 		// alert(stuff);
 
 		// var pos = $('#breadcrumb').offset();
 		// alert(pos);
-		$('.breadcrumb_links').each(function(){
-			if(current_scroll_position >= $(this).offset().top && current_scroll_position <= $(this).next().offset().top)
-			{
-				$('#breadcrumb_append').html('stuff > more >> ' + $(this).html());
-				// $('#breadcrumb').html($(this).offset().top);
+		// $('.breadcrumb_links').each(function(){
+		// 	if(current_scroll_position >= $(this).offset().top && current_scroll_position <= $(this).next().offset().top)
+		// 	{
+		// 		$('#breadcrumb_append').html('stuff > more >> ' + $(this).html());
+		// 		// $('#breadcrumb').html($(this).offset().top);
 
-				return; //break the loop
-			}
-		});
+		// 		return; //break the loop
+		// 	}
+		// });
 	});
 
 	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
