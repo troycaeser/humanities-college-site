@@ -528,14 +528,10 @@ a.next::before {
 .bg_circles_2 {
   top: 0;
   right: -10%;
-  -webkit-transform: rotate(60deg);
-  -moz-transform: rotate(60deg);
-  -ms-transform: rotate(60deg);
-  transform: rotate(60deg);
-  -webkit-transform: scale(1.5);
-  -moz-transform: scale(1.5);
-  -ms-transform: scale(1.5);
-  transform: scale(1.5); }
+  -webkit-transform: rotate(60deg) scale(1.5);
+  -moz-transform: rotate(60deg) scale(1.5);
+  -ms-transform: rotate(60deg) scale(1.5);
+  transform: rotate(60deg) scale(1.5); }
 
 .bg_circles,
 .bg_circles_2 {

@@ -83,17 +83,11 @@ $dropshadow: #000
 	-ms-transform: translateX($xpercent) rotate($deg)
 	transform: translateX($xpercent) rotate($deg)
 
-=rotate($deg)
-	-webkit-transform: rotate($deg)
-	-moz-transform: rotate($deg)
-	-ms-transform: rotate($deg)
-	transform: rotate($deg)
-
-=scale($size)
-	-webkit-transform: scale($size)
-	-moz-transform: scale($size)
-	-ms-transform: scale($size)
-	transform: scale($size)
+=rotate-and-scale($deg, $size)
+	-webkit-transform: rotate($deg) scale($size)
+	-moz-transform: rotate($deg) scale($size)
+	-ms-transform: rotate($deg) scale($size)
+	transform: rotate($deg) scale($size)
 
 =skewTransform($deg)
 	-webkit-transform: skew($deg)
@@ -686,8 +680,7 @@ a.next::before
 .bg_circles_2
 	top: 0
 	right: -10%
-	+rotate(60deg)
-	+scale(1.5)
+	+rotate-and-scale(60deg, 1.5)
 
 .bg_circles,
 .bg_circles_2
