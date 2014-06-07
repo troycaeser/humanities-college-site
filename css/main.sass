@@ -15,8 +15,16 @@ $big_nav_dropdown_fg_hover: #fff
 $big_nav_dropdown_bg_hover: #00A4E4
 $big_nav_dropdown_bg_default: #fff
 
+$hero_gradient_dark: #009346
+$hero_gradient_light: #00d464
+
+$bubbles_big: #c2ffdf
+$bubbles_medium: #b0e89a
+$bubbles_small: #87ffbb
+
 $articles_heading: #006934
 $articles_body: #006934
+$articles_heading_lines: #006934
 
 $pictures_lines: #fff
 
@@ -149,6 +157,9 @@ body
 	margin: 10px 0 0 0
 	padding: 0
 	top: 2em
+	-moz-box-shadow:    3px 2px 4px rgba(0, 0, 0, 0.5)
+	-webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5)
+	box-shadow:         3px 2px 4px rgba(0, 0, 0, 0.5)
 	.nav_logo
 		// display: block
 		// margin: 0 auto
@@ -312,7 +323,7 @@ body
 	width: 100%
 	padding: 5em 0 2em 0
 	z-index: 990
-	background: -webkit-linear-gradient($big_nav_default -10%, $big_nav_hover, $big_nav_default 110%)
+	background: -webkit-linear-gradient($hero_gradient_dark -10%, $hero_gradient_light, $hero_gradient_dark 110%)
 	color: $wireframebg
 	-webkit-transition: 0.3s ease-in-out
 	-moz-transition: 0.3s ease-in-out
@@ -620,15 +631,82 @@ a.next::before
 	ul
 		list-style: none
 
+.news_header::before
+	content: ''
+	position: relative
+	display: inline-block
+	margin: 0
+	width: 69px
+	height: 23px
+	background: url(../img/symbol_left.png) no-repeat center
+	background-size: cover
+
+.news_header::after
+	content: ''
+	position: relative
+	display: inline-block
+	margin: 0
+	width: 69px
+	height: 23px
+	background: url(../img/symbol_right.png) no-repeat center
+	background-size: cover
+
+.bg_circles
+	position: absolute
+	bottom: 20%
+	left: 0
+	width: 500px
+	height: 250px
+	display: block
+	.big
+		position: inherit
+		display: block
+		background: $bubbles_big
+		left: 25%
+		width: 200px
+		height: 200px
+		opacity: 0.5
+		+border-radius(50%)
+		-moz-box-shadow:    3px 8px 6px $dropshadow
+		-webkit-box-shadow: 3px 8px 6px $dropshadow
+		box-shadow:         3px 8px 6px $dropshadow
+	.medium
+		position: inherit
+		display: block
+		background: $bubbles_medium
+		top: 50%
+		left: 30%
+		width: 160px
+		height: 160px
+		opacity: 0.5
+		+border-radius(50%)
+		-moz-box-shadow:    3px 8px 6px $dropshadow
+		-webkit-box-shadow: 3px 8px 6px $dropshadow
+		box-shadow:         3px 8px 6px $dropshadow
+	.small
+		position: inherit
+		display: block
+		background: $bubbles_small
+		top: 30%
+		left: 15%
+		width: 135px
+		height: 135px
+		opacity: 0.5
+		+border-radius(50%)
+		-moz-box-shadow:    3px 8px 6px $dropshadow
+		-webkit-box-shadow: 3px 8px 6px $dropshadow
+		box-shadow:         3px 8px 6px $dropshadow
+
 .main_content
 	position: relative
-	padding: 3em 10%
+	z-index: 999
+	margin: -2.4em 0
 	color: $wireframefg
 	.container
 		padding: 0
 
 .main_content_slideUp
-	margin: 7em 0
+	margin: 5.6em 0
 
 .side_menu
 	display: inline-block
@@ -656,8 +734,8 @@ a.next::before
 		a.ca-header
 			width: 170px
 			height: auto
-			background: url(../img/side_menu_header.jpg) no-repeat
-			background-size: 95%
+			background: url(../img/side_menu_header.png) no-repeat
+			background-size: 90%
 			padding: 12px 0 12px 6px
 			color: $sidemenu_header_fg
 			border-bottom: none
@@ -703,8 +781,22 @@ a.next::before
 		-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.5)
 		-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5)
 		text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.5)
+		margin: 1em 0 0.7em 0
+		padding: 0 0 0.5em 0
+		border-bottom: 1px solid $articles_heading_lines
 	p
 		color: $articles_body
+		text-indent: 2em
+
+// .articles h1::after
+// 	position: absolute
+// 	left: 0
+// 	margin-top: 1.7em
+// 	content: ''
+// 	width: 100%
+// 	height: 1px
+// 	background: $articles_heading_lines
+// 	opacity: 0.5
 
 .person
 	margin: 10px 0 25px 0
