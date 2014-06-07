@@ -490,7 +490,8 @@ a.next::before {
   position: relative;
   padding: 3em 10%;
   background: white;
-  color: #003f15; }
+  color: #003f15;
+  overflow: hidden; }
   .news h2 {
     text-align: center;
     margin: 0 0 25px;
@@ -521,13 +522,29 @@ a.next::before {
   background-size: cover; }
 
 .bg_circles {
-  position: absolute;
   bottom: 20%;
-  left: 0;
+  left: 0; }
+
+.bg_circles_2 {
+  top: 0;
+  right: -10%;
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5); }
+
+.bg_circles,
+.bg_circles_2 {
+  position: absolute;
   width: 500px;
   height: 250px;
   display: block; }
-  .bg_circles .big {
+  .bg_circles .big,
+  .bg_circles_2 .big {
     position: inherit;
     display: block;
     background: #c2ffdf;
@@ -542,7 +559,8 @@ a.next::before {
     -moz-box-shadow: 3px 8px 6px black;
     -webkit-box-shadow: 3px 8px 6px black;
     box-shadow: 3px 8px 6px black; }
-  .bg_circles .medium {
+  .bg_circles .medium,
+  .bg_circles_2 .medium {
     position: inherit;
     display: block;
     background: #b0e89a;
@@ -558,7 +576,8 @@ a.next::before {
     -moz-box-shadow: 3px 8px 6px black;
     -webkit-box-shadow: 3px 8px 6px black;
     box-shadow: 3px 8px 6px black; }
-  .bg_circles .small {
+  .bg_circles .small,
+  .bg_circles_2 .small {
     position: inherit;
     display: block;
     background: #87ffbb;
@@ -662,6 +681,14 @@ a.next::before {
   .articles p {
     color: #006934;
     text-indent: 2em; }
+
+.breadcrumb {
+  background: none;
+  padding: 8px 0 15px 0; }
+  .breadcrumb a {
+    color: white; }
+  .breadcrumb .active {
+    color: white; }
 
 .person {
   margin: 10px 0 25px 0; }
