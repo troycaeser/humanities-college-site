@@ -37,6 +37,7 @@ $app_link_default: #006934
 $app_link_hover: #22AC38
 
 $footer_bg: #009346
+$footer_body: #fff
 
 $dropshadow: #000
 
@@ -46,6 +47,8 @@ $sidemenu_hover: #22AC38
 $sidemenu_lines: #22AC38
 
 $dropshadow: #000
+
+//asdf
 
 // @mixin device_length($device)
 // 	@if $device == smartphone
@@ -792,9 +795,20 @@ a.next::before
 		margin: 1em 0 0.7em 0
 		padding: 0 0 0.5em 0
 		border-bottom: 1px solid $articles_heading_lines
+	h4
+		margin: 15px 0
+		color: $articles_heading
+		text-decoration: underline
+		-moz-text-shadow:    3px 2px 1px rgba(0, 0, 0, 0.2)
+		-webkit-text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.2)
+		text-shadow:         3px 2px 1px rgba(0, 0, 0, 0.2)
+
 	p
 		color: $articles_body
 		text-indent: 2em
+	ul
+		li
+			color: $articles_body
 	.laws
 		list-style-type: none
 		counter-reset: ol-counter
@@ -816,9 +830,8 @@ a.next::before
 .breadcrumb
 	background: none
 	padding: 8px 0 15px 0
+	color: $breadcrumb_default
 	a
-		color: $breadcrumb_default
-	.active
 		color: $breadcrumb_default
 
 .person
@@ -833,6 +846,7 @@ a.next::before
 			display: block
 			margin: 0
 			padding: 0
+			text-decoration: none
 		h4
 			border-top: 1px solid $articles_heading_lines
 	a:hover
@@ -871,15 +885,17 @@ footer
 				font-size: 11px
 	.contact_details
 		float: right
-		color: $wireframebg
+		color: $footer_body
 		font-size: 11px
 		-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.8)
 		-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8)
 		text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.8)
+		a
+			color: $footer_body
 
 	.copyright_details
 		margin: 50px 0 10px 0
-		color: $wireframebg
+		color: $footer_body
 		font-size: 10px
 		-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.8)
 		-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8)

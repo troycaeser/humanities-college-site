@@ -778,9 +778,20 @@ a.next::before {
   padding: 0 0 0.5em 0;
   border-bottom: 1px solid #006934;
 }
+.articles h4 {
+  margin: 15px 0;
+  color: #006934;
+  text-decoration: underline;
+  -moz-text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
 .articles p {
   color: #006934;
   text-indent: 2em;
+}
+.articles ul li {
+  color: #006934;
 }
 .articles .laws {
   list-style-type: none;
@@ -806,11 +817,9 @@ a.next::before {
 .breadcrumb {
   background: none;
   padding: 8px 0 15px 0;
-}
-.breadcrumb a {
   color: white;
 }
-.breadcrumb .active {
+.breadcrumb a {
   color: white;
 }
 
@@ -828,6 +837,7 @@ a.next::before {
   display: block;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 .person a h4 {
   border-top: 1px solid #006934;
@@ -883,6 +893,9 @@ footer .contact_details {
   -moz-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
   -webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
   text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
+}
+footer .contact_details a {
+  color: white;
 }
 footer .copyright_details {
   margin: 50px 0 10px 0;
