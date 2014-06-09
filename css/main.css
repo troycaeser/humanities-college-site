@@ -795,7 +795,8 @@ a.next::before {
 }
 
 .person {
-  margin: 10px 0 25px 0;
+  margin: 10px 0 50px 0;
+  display: block;
 }
 .person a {
   position: absolute;
@@ -819,9 +820,8 @@ a.next::before {
 }
 .person ul {
   position: relative;
-  display: inline-block;
-  margin: 0 0 0 150px;
-  top: -20px;
+  display: block;
+  left: 15%;
 }
 .person img {
   vertical-align: initial;
