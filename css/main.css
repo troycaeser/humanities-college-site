@@ -53,38 +53,26 @@ body {
   -moz-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
+.big_nav .container {
+  padding: 0;
+}
 .big_nav .big_nav_inner {
   width: 90%;
   max-width: 69em;
   margin: 0 auto;
 }
-.big_nav h1, .big_nav h3, .big_nav h4, .big_nav a {
+.big_nav a {
   color: #006934;
 }
 .big_nav .nav_logo {
   width: 45%;
   display: inline;
-  margin: 0 25px 0 0;
-}
-.big_nav .nav_logo h1 {
-  display: inline-block;
-  margin: 0 auto;
-  line-height: 1.5;
-  font-size: 50px;
 }
 .big_nav .nav_logo div {
   display: inline-block;
 }
-.big_nav .nav_logo div h3, .big_nav .nav_logo div h4 {
-  margin: 0 auto;
-  padding: 0;
-}
-.big_nav .nav_logo div h3 {
-  letter-spacing: 13px;
-  font-size: 20px;
-}
-.big_nav .nav_logo div h4 {
-  font-size: 11px;
+.big_nav .nav_logo img {
+  float: left;
 }
 .big_nav .nav {
   display: inline-block;
@@ -99,10 +87,7 @@ body {
   -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.big_nav_shrink .nav_logo h1 {
-  line-height: 1;
-}
-.big_nav_shrink .nav_logo h1, .big_nav_shrink .nav_logo h3, .big_nav_shrink .nav_logo h4 {
+.big_nav_shrink .nav_logo img {
   visibility: hidden;
   display: none;
 }
@@ -758,7 +743,6 @@ a.next::before {
 
 .nav_courses {
   display: block;
-  background: #00a478;
 }
 .nav_courses .thumbnail_link {
   position: relative;
@@ -770,16 +754,10 @@ a.next::before {
 }
 .nav_courses .thumbnail_link a {
   display: block;
-  width: 100px;
-  height: 100px;
-  background: #001641;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  border-radius: 20px;
-  -moz-box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.7), 0px 0px 10px rgba(255, 255, 255, 0.5) inset;
-  -webkit-box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.7), 0px 0px 10px rgba(255, 255, 255, 0.5) inset;
-  box-shadow: 4px 4px 4px 1px rgba(0, 0, 0, 0.7), 0px 0px 10px rgba(255, 255, 255, 0.5) inset;
+  color: #006934;
+}
+.nav_courses .thumbnail_link a:hover {
+  color: #22ac38;
 }
 .nav_courses .thumbnail_link p {
   margin: 10px 0;

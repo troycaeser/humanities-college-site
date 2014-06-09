@@ -33,6 +33,9 @@ $pictures_lines: #fff
 $news_bg: #fff
 $news_fg: #003F15
 
+$app_link_default: #006934
+$app_link_hover: #22AC38
+
 $footer_bg: #009346
 
 $dropshadow: #000
@@ -143,31 +146,21 @@ body
 	-webkit-transition: 0.3s ease-in-out
 	-moz-transition: 0.3s ease-in-out
 	transition: 0.3s ease-in-out
+	.container
+		padding: 0
 	.big_nav_inner
 		width: 90%
 		max-width: 69em
 		margin: 0 auto
-	h1, h3, h4, a
+	a
 		color: $big_nav_default
 	.nav_logo
 		width: 45%
 		display: inline
-		margin: 0 25px 0 0
-		h1
-			display: inline-block
-			margin: 0 auto
-			line-height: 1.5
-			font-size: 50px
 		div
 			display: inline-block
-			h3, h4
-				margin: 0 auto
-				padding: 0
-			h3
-				letter-spacing: 13px
-				font-size: 20px
-			h4
-				font-size: 11px
+		img
+			float: left
 	.nav
 		display: inline-block
 
@@ -180,12 +173,7 @@ body
 	-webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5)
 	box-shadow:         3px 2px 4px rgba(0, 0, 0, 0.5)
 	.nav_logo
-		// display: block
-		// margin: 0 auto
-		h1
-			line-height: 1
-			//font-size: 60px
-		h1, h3, h4
+		img
 			visibility: hidden
 			display: none
 
@@ -776,7 +764,6 @@ a.next::before
 
 .nav_courses
 	display: block
-	background: $testcolor
 	.thumbnail_link
 		position: relative
 		list-style: none
@@ -786,13 +773,9 @@ a.next::before
 		text-align: center
 		a
 			display: block
-			width: 100px
-			height: 100px
-			background: $wireframefg
-			+border-radius(20px)
-			-moz-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.7), 0px 0px 10px rgba(255,255,255,0.5) inset
-			-webkit-box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.7), 0px 0px 10px rgba(255,255,255,0.5) inset
-			box-shadow: 4px 4px 4px 1px rgba(0,0,0,0.7), 0px 0px 10px rgba(255,255,255,0.5) inset
+			color: $app_link_default
+		a:hover
+			color: $app_link_hover
 		p
 			margin: 10px 0
 
