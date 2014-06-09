@@ -941,25 +941,15 @@ footer .copyright_details {
   background-color: white;
 }
 
-section::before,
-section::after {
+.section_footer_triangles::before {
   position: absolute;
+  display: block;
   content: "";
-  pointer-events: none;
-}
-
-.section_news_triangles::after {
   left: 50%;
-  width: 30px;
-  height: 30px;
-  -webkit-transform: translateX(-50%) rotate(45deg);
-  -moz-transform: translateX(-50%) rotate(45deg);
-  -ms-transform: translateX(-50%) rotate(45deg);
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.section_news_triangles::after {
-  bottom: -10px;
-  z-index: 10;
-  background: inherit;
+  margin: -30px 0 0 -35px;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid white;
 }
