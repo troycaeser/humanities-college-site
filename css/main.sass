@@ -795,6 +795,23 @@ a.next::before
 	p
 		color: $articles_body
 		text-indent: 2em
+	.laws
+		list-style-type: none
+		counter-reset: ol-counter
+		li::before
+			position: absolute
+			margin: 0
+			padding: 0
+			left: -2em
+			width: 0.8em
+			font-weight: bold
+			text-align: right
+			color: #464646
+			content: counter(ol-counter)
+			counter-increment: ol-counter
+		li
+			position: relative
+			margin: 0 0 10px 0
 
 .breadcrumb
 	background: none
