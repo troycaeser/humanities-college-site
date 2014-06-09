@@ -44,21 +44,19 @@ $sidemenu_lines: #22AC38
 
 $dropshadow: #000
 
-
-@mixin device_length($device)
-	@if $device == smartphone
-		@media (min-width: 320px)
-			@content
-		@media (min-width: 480px)
-	@else if $device == tablet
-		@media (min-width: 768px)
-			@content
-		@media (min-width: 1024px)
-	@else if $device == desk
-		@media (min-width: 1224px)
-			@content
-	@else if $device == big_desk
-		@media (min-width: 1824px)
+// @mixin device_length($device)
+// 	@if $device == smartphone
+// 		@media only screen and (min-width: 320px) and @media (min-width: 480px)
+// 			@content
+// 	@else if $device == tablet
+// 		@media only screen and (min-width: 768px) and @media (min-width: 1024px)
+// 			@content
+// 	@else if $device == desk
+// 		@media (min-width: 1224px)
+// 			@content
+// 	@else if $device == big_desk
+// 		@media (min-width: 1824px)
+// 			@content
 
 =transform($translate)
 	-webkit-transform: translateY($translate)
@@ -390,8 +388,10 @@ body
 .component-fullwidth
 	width: 100%
 	max-width: 100%
-	height: 800px
+	height: 700px
 	background: #333
+	// @inclue device_length(tablet)
+	// 	height: 700px
 
 .component 
 	ul
@@ -773,12 +773,6 @@ a.next::before
 .ca-header li a span,
 .ca-menu li a span
 	padding: 0 0 0 10px
-
-// .ca-menu > li > a.ca-header:hover::before
-// 	border-top: 20px solid transparent
-// 	border-bottom: 20px solid transparent
-// 	border-right: 0 solid transparent
-// 	border-left: 20px solid $testcolor
 
 .nav_courses
 	display: block
