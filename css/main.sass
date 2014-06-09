@@ -780,6 +780,7 @@ a.next::before
 			margin: 10px 0
 
 .articles
+	width: 100%
 	display: inline-block
 	position: relative
 	margin: 0 0 0 20%
@@ -805,21 +806,28 @@ a.next::before
 
 .person
 	margin: 10px 0 25px 0
+	a
+		position: absolute
+		display: inline-block
+		margin: 45px 20px 0 10px
+		color: $big_nav_default
+		h3, h4
+			display: block
+			margin: 0
+			padding: 0
+		h4
+			border-top: 1px solid $articles_heading_lines
+	a:hover
+		color: $big_nav_hover
+		h4
+			border-top: 1px solid $big_nav_hover
 	ul
 		position: relative
 		display: inline-block
+		margin: 0 0 0 150px
 		top: -20px
-
-.circular
-	position: relative
-	margin: 10px 0 0 0
-	width: 150px
-	height: 150px
-	display: inline-block
-	overflow: hidden
-	background-size: cover
-	background-image: url(../img/8.jpg)
-	+border-radius(50%)
+	img
+		vertical-align: initial
 
 footer
 	background: $footer_bg

@@ -764,6 +764,7 @@ a.next::before {
 }
 
 .articles {
+  width: 100%;
   display: inline-block;
   position: relative;
   margin: 0 0 0 20%;
@@ -796,25 +797,34 @@ a.next::before {
 .person {
   margin: 10px 0 25px 0;
 }
+.person a {
+  position: absolute;
+  display: inline-block;
+  margin: 45px 20px 0 10px;
+  color: #006934;
+}
+.person a h3, .person a h4 {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.person a h4 {
+  border-top: 1px solid #006934;
+}
+.person a:hover {
+  color: #22ac38;
+}
+.person a:hover h4 {
+  border-top: 1px solid #22ac38;
+}
 .person ul {
   position: relative;
   display: inline-block;
+  margin: 0 0 0 150px;
   top: -20px;
 }
-
-.circular {
-  position: relative;
-  margin: 10px 0 0 0;
-  width: 150px;
-  height: 150px;
-  display: inline-block;
-  overflow: hidden;
-  background-size: cover;
-  background-image: url(../img/8.jpg);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
+.person img {
+  vertical-align: initial;
 }
 
 footer {
