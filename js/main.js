@@ -4,6 +4,7 @@ $(document).ready(function() {
 	$('#big_nav').load('includes/big_nav.html', function(){
 		var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
 	});
+	$('#side_menu').load('includes/side_menu.html');
 	$('#footer').load('includes/footer.html');
 
 	$(window).scroll(function(){
