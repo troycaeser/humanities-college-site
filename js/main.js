@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+	$('#tiny_nav').load('includes/tiny_nav.html');
+	$('#big_nav').load('includes/big_nav.html', function(){
+		var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+	});
+	$('#footer').load('includes/footer.html');
+
 	$(window).scroll(function(){
 		var current_scroll_position = $(this).scrollTop();
 		var big_nav_scroll_position = $('.big_nav').offset().top;
@@ -17,24 +23,7 @@ $(document).ready(function() {
 			$('.main_content').removeClass('main_content_slideUp');
 			$('li').removeClass('active');
 		}
-
-		// var stuff = $('.post').text();
-		// alert(stuff);
-
-		// var pos = $('#breadcrumb').offset();
-		// alert(pos);
-		// $('.breadcrumb_links').each(function(){
-		// 	if(current_scroll_position >= $(this).offset().top && current_scroll_position <= $(this).next().offset().top)
-		// 	{
-		// 		$('#breadcrumb_append').html('stuff > more >> ' + $(this).html());
-		// 		// $('#breadcrumb').html($(this).offset().top);
-
-		// 		return; //break the loop
-		// 	}
-		// });
 	});
-
-	var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
 
 	var support = { animations : Modernizr.cssanimations },
 		animEndEventNames = {
