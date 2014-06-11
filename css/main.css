@@ -43,7 +43,7 @@ body {
 .big_nav {
   position: relative;
   display: block;
-  padding: 20px;
+  padding: 20px 0 0 0;
   z-index: 1000;
   width: 100%;
   height: auto;
@@ -65,6 +65,15 @@ body {
   color: #006934;
 }
 .big_nav .nav_logo {
+  display: inline;
+}
+.big_nav .nav_logo a {
+  display: inline-block;
+}
+.big_nav .nav_logo img {
+  float: left;
+}
+.big_nav .nav {
   display: inline-block;
 }
 
