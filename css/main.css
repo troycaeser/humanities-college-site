@@ -40,6 +40,10 @@ body {
   z-index: 1002;
 }
 
+.sitemaps li {
+  margin: 10px;
+}
+
 .big_nav {
   position: relative;
   display: block;
