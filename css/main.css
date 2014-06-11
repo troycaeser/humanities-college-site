@@ -696,6 +696,8 @@ a.next::before {
   z-index: 999;
   margin: -2.4em 0;
   color: #001641;
+  background: url(../img/bubble_bg.png);
+  background-position: cover;
 }
 .main_content .container {
   padding: 0;
@@ -774,6 +776,8 @@ a.next::before {
   display: inline-block;
   position: relative;
   width: 80%;
+  min-height: 800px;
+  max-height: 100%;
   margin: 0 0 0 20%;
 }
 .articles h1 {
@@ -819,6 +823,16 @@ a.next::before {
 .articles .laws li {
   position: relative;
   margin: 0 0 10px 0;
+}
+
+.links {
+  list-style-type: none;
+}
+.links li {
+  margin: 10px 0 10px 0;
+}
+.links a {
+  margin: 0 0 0 20px;
 }
 
 .breadcrumb {
