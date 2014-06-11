@@ -625,61 +625,6 @@ a.next::before
 	background: url(../img/symbol_right.png) no-repeat center
 	background-size: cover
 
-.bg_circles
-	bottom: 10%
-	left: -10%
-	+rotate-and-scale(0deg, 0.7)
-
-.bg_circles_2
-	top: 10%
-	right: -10%
-	+rotate-and-scale(60deg, 1)
-
-.bg_circles,
-.bg_circles_2
-	position: absolute
-	width: 500px
-	height: 250px
-	display: block
-	.big
-		position: inherit
-		display: block
-		background: $bubbles_big
-		left: 25%
-		width: 200px
-		height: 200px
-		opacity: 0.5
-		+border-radius(50%)
-		-moz-box-shadow:    3px 8px 6px $dropshadow
-		-webkit-box-shadow: 3px 8px 6px $dropshadow
-		box-shadow:         3px 8px 6px $dropshadow
-	.medium
-		position: inherit
-		display: block
-		background: $bubbles_medium
-		top: 50%
-		left: 30%
-		width: 160px
-		height: 160px
-		opacity: 0.5
-		+border-radius(50%)
-		-moz-box-shadow:    3px 8px 6px $dropshadow
-		-webkit-box-shadow: 3px 8px 6px $dropshadow
-		box-shadow:         3px 8px 6px $dropshadow
-	.small
-		position: inherit
-		display: block
-		background: $bubbles_small
-		top: 30%
-		left: 15%
-		width: 135px
-		height: 135px
-		opacity: 0.5
-		+border-radius(50%)
-		-moz-box-shadow:    3px 8px 6px $dropshadow
-		-webkit-box-shadow: 3px 8px 6px $dropshadow
-		box-shadow:         3px 8px 6px $dropshadow
-
 .main_content
 	position: relative
 	z-index: 999
