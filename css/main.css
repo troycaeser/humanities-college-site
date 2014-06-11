@@ -65,22 +65,12 @@ body {
   color: #006934;
 }
 .big_nav .nav_logo {
-  width: 45%;
-  display: inline;
-}
-.big_nav .nav_logo div {
-  display: inline-block;
-}
-.big_nav .nav_logo img {
-  float: left;
-}
-.big_nav .nav {
   display: inline-block;
 }
 
 .big_nav_shrink {
   position: fixed;
-  margin: 10px 0 0 0;
+  margin: 0 0 0 0;
   padding: 0;
   top: 2em;
   -moz-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
@@ -100,13 +90,13 @@ body {
 
 /* set menu position change here to set to relative or float, etc. */
 .big_nav_menu {
-  display: inline;
+  display: inline-block;
   position: relative;
   z-index: 1002;
   bottom: 0;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 22px 0 0 0;
   text-transform: capitalize;
 }
 .big_nav_menu .active {
@@ -272,9 +262,9 @@ body {
   display: inline-block;
   width: 50%;
   height: 17em;
-  background: repeating-linear-gradient(-45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
-  margin-right: 20px;
-  right: 0;
+  background: url("../img/slash.png");
+  background-position: cover;
+  right: 20px;
   top: 0;
 }
 
@@ -889,7 +879,7 @@ footer .nav_logo div h4 {
 footer .contact_details {
   float: right;
   color: white;
-  font-size: 11px;
+  font-size: 14px;
   -moz-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
   -webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
   text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
@@ -898,6 +888,7 @@ footer .contact_details a {
   color: white;
 }
 footer .copyright_details {
+  text-align: center;
   margin: 50px 0 10px 0;
   color: white;
   font-size: 10px;

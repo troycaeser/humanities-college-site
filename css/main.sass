@@ -48,22 +48,6 @@ $sidemenu_lines: #22AC38
 
 $dropshadow: #000
 
-//asdf
-
-// @mixin device_length($device)
-// 	@if $device == smartphone
-// 		@media only screen and (min-width: 320px) and @media (min-width: 480px)
-// 			@content
-// 	@else if $device == tablet
-// 		@media only screen and (min-width: 768px) and @media (min-width: 1024px)
-// 			@content
-// 	@else if $device == desk
-// 		@media (min-width: 1224px)
-// 			@content
-// 	@else if $device == big_desk
-// 		@media (min-width: 1824px)
-// 			@content
-
 =transform($translate)
 	-webkit-transform: translateY($translate)
 	-ms-transform: translateY($translate)
@@ -158,18 +142,11 @@ body
 	a
 		color: $big_nav_default
 	.nav_logo
-		width: 45%
-		display: inline
-		div
-			display: inline-block
-		img
-			float: left
-	.nav
 		display: inline-block
 
 .big_nav_shrink
 	position: fixed
-	margin: 10px 0 0 0
+	margin: 0 0 0 0
 	padding: 0
 	top: 2em
 	-moz-box-shadow:    3px 2px 4px rgba(0, 0, 0, 0.5)
@@ -187,14 +164,13 @@ body
 
 /* set menu position change here to set to relative or float, etc. */
 .big_nav_menu
-	display: inline
+	display: inline-block
 	position: relative
 	z-index: 1002
 	bottom: 0
-	//width: 100%
 	text-align: center
 	padding: 0
-	margin: 0
+	margin: 22px 0 0 0
 	text-transform: capitalize
 	.active
 		background: $wireframebg
@@ -261,34 +237,6 @@ body
 .big_nav_menu > li:last-child .cbp-tm-submenu
 	right: 0
 
-// .cbp-tm-submenu:after
-// 	border: solid transparent
-// 	content: " "
-// 	height: 0
-// 	width: 0
-// 	position: absolute
-// 	pointer-events: none
-
-// .cbp-tm-show-above .cbp-tm-submenu:after
-// 	top: 100%
-// 	margin-top: -10px
-
-// .cbp-tm-show-below .cbp-tm-submenu:after
-// 	bottom: 100%
-// 	margin-bottom: -10px
-
-// .cbp-tm-submenu:after
-// 	border-color: transparent
-// 	border-width: 16px
-// 	margin-left: -16px
-// 	left: 50%
-
-// .cbp-tm-show-above .cbp-tm-submenu:after
-// 	border-top-color: #fff
-
-// .cbp-tm-show-below .cbp-tm-submenu:after
-// 	border-bottom-color: #fff
-
 .cbp-tm-submenu > li
 	display: block
 	background: $big_nav_dropdown_bg_default
@@ -320,12 +268,6 @@ body
 .cbp-tm-submenu > li > a:active
 	color: $big_nav_dropdown_fg_hover
 	background: $big_nav_dropdown_bg_hover
-
-// .cbp-tm-submenu li a:before
-// 	position: absolute
-// 	top: 50%
-// 	margin-top: -0.5em
-// 	right: 0.5em
 
 .hero-main
 	position: relative
@@ -363,9 +305,9 @@ body
 	display: inline-block
 	width: 50%
 	height: 17em
-	background: repeating-linear-gradient(-45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px)
-	margin-right: 20px
-	right: 0
+	background: url('../img/slash.png')
+	background-position: cover
+	right: 20px
 	top: 0
 
 .pictures
@@ -381,8 +323,6 @@ body
 	max-width: 100%
 	height: 700px
 	background: #333
-	// @inclue device_length(tablet)
-	// 	height: 700px
 
 .component 
 	ul
@@ -393,7 +333,7 @@ body
 		list-style: none
 		padding: 0
 		margin: 0 auto
-		z-index: 0 //important for front or forward
+		z-index: 0
 
 .component-fullwidth
 	ul
@@ -886,7 +826,7 @@ footer
 	.contact_details
 		float: right
 		color: $footer_body
-		font-size: 11px
+		font-size: 14px
 		-moz-text-shadow:    3px 2px 4px rgba(0, 0, 0, 0.8)
 		-webkit-text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8)
 		text-shadow:         3px 2px 4px rgba(0, 0, 0, 0.8)
@@ -894,6 +834,7 @@ footer
 			color: $footer_body
 
 	.copyright_details
+		text-align: center
 		margin: 50px 0 10px 0
 		color: $footer_body
 		font-size: 10px
@@ -956,7 +897,3 @@ footer
 	border-left: 40px solid transparent
 	border-right: 40px solid transparent
 	border-top: 30px solid #fff
-
-// .section_news_triangles::before
-// 	z-index: 10
-// 	background: #fff
