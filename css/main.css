@@ -9,6 +9,13 @@ body {
   background: white;
 }
 
+.anchor {
+  display: block;
+  height: 163px;
+  margin-top: -163px;
+  visibility: hidden;
+}
+
 .tiny_nav {
   position: relative;
   top: 0;
