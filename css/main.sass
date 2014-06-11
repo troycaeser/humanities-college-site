@@ -141,7 +141,7 @@ body
 		margin: 0 auto
 	a
 		color: $big_nav_default
-	.nav_logo
+	.nav_logos
 		display: inline
 		a
 			display: inline-block
@@ -158,7 +158,7 @@ body
 	-moz-box-shadow:    3px 2px 4px rgba(0, 0, 0, 0.5)
 	-webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5)
 	box-shadow:         3px 2px 4px rgba(0, 0, 0, 0.5)
-	.nav_logo
+	.nav_logos
 		img
 			visibility: hidden
 			display: none
@@ -611,13 +611,14 @@ a.next::before
 	background-size: cover
 
 .bg_circles
-	bottom: 20%
-	left: 0
+	bottom: 10%
+	left: -10%
+	+rotate-and-scale(0deg, 0.7)
 
 .bg_circles_2
-	top: 0
+	top: 10%
 	right: -10%
-	+rotate-and-scale(60deg, 1.5)
+	+rotate-and-scale(60deg, 1)
 
 .bg_circles,
 .bg_circles_2
@@ -814,21 +815,8 @@ footer
 		color: $wireframebg
 		width: 45%
 		display: inline
-		h1
-			display: inline-block
-			margin: 0 auto
-			line-height: 1.5
-			font-size: 50px
-		div
-			display: inline-block
-			h3, h4
-				margin: 0 auto
-				padding: 0
-			h3
-				letter-spacing: 13px
-				font-size: 20px
-			h4
-				font-size: 11px
+		img
+			margin: 20px 0 0 0
 	.contact_details
 		float: right
 		color: $footer_body

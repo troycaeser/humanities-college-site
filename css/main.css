@@ -64,13 +64,13 @@ body {
 .big_nav a {
   color: #006934;
 }
-.big_nav .nav_logo {
+.big_nav .nav_logos {
   display: inline;
 }
-.big_nav .nav_logo a {
+.big_nav .nav_logos a {
   display: inline-block;
 }
-.big_nav .nav_logo img {
+.big_nav .nav_logos img {
   float: left;
 }
 .big_nav .nav {
@@ -86,7 +86,7 @@ body {
   -webkit-box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.big_nav_shrink .nav_logo img {
+.big_nav_shrink .nav_logos img {
   visibility: hidden;
   display: none;
 }
@@ -609,17 +609,21 @@ a.next::before {
 }
 
 .bg_circles {
-  bottom: 20%;
-  left: 0;
+  bottom: 10%;
+  left: -10%;
+  -webkit-transform: rotate(0deg) scale(0.7);
+  -moz-transform: rotate(0deg) scale(0.7);
+  -ms-transform: rotate(0deg) scale(0.7);
+  transform: rotate(0deg) scale(0.7);
 }
 
 .bg_circles_2 {
-  top: 0;
+  top: 10%;
   right: -10%;
-  -webkit-transform: rotate(60deg) scale(1.5);
-  -moz-transform: rotate(60deg) scale(1.5);
-  -ms-transform: rotate(60deg) scale(1.5);
-  transform: rotate(60deg) scale(1.5);
+  -webkit-transform: rotate(60deg) scale(1);
+  -moz-transform: rotate(60deg) scale(1);
+  -ms-transform: rotate(60deg) scale(1);
+  transform: rotate(60deg) scale(1);
 }
 
 .bg_circles,
@@ -865,25 +869,8 @@ footer .nav_logo {
   width: 45%;
   display: inline;
 }
-footer .nav_logo h1 {
-  display: inline-block;
-  margin: 0 auto;
-  line-height: 1.5;
-  font-size: 50px;
-}
-footer .nav_logo div {
-  display: inline-block;
-}
-footer .nav_logo div h3, footer .nav_logo div h4 {
-  margin: 0 auto;
-  padding: 0;
-}
-footer .nav_logo div h3 {
-  letter-spacing: 13px;
-  font-size: 20px;
-}
-footer .nav_logo div h4 {
-  font-size: 11px;
+footer .nav_logo img {
+  margin: 20px 0 0 0;
 }
 footer .contact_details {
   float: right;
