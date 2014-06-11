@@ -286,6 +286,8 @@ body
 	padding: 5em 0 2em 0
 	z-index: 990
 	background: -webkit-linear-gradient($hero_gradient_dark -10%, $hero_gradient_light, $hero_gradient_dark 110%)
+	background: -moz-linear-gradient($hero_gradient_dark -10%, $hero_gradient_light, $hero_gradient_dark 110%)
+	background: -o-linear-gradient($hero_gradient_dark -10%, $hero_gradient_light, $hero_gradient_dark 110%)
 	color: $wireframebg
 	-webkit-transition: 0.3s ease-in-out
 	-moz-transition: 0.3s ease-in-out
@@ -817,6 +819,7 @@ a.next::before
 	a:hover
 		color: $big_nav_hover
 		h4
+			color: $big_nav_hover
 			border-top: 1px solid $big_nav_hover
 	ul
 		position: relative

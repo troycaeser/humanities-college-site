@@ -240,6 +240,8 @@ body {
   padding: 5em 0 2em 0;
   z-index: 990;
   background: -webkit-linear-gradient(#009346 -10%, #00d464, #009346 110%);
+  background: -moz-linear-gradient(#009346 -10%, #00d464, #009346 110%);
+  background: -o-linear-gradient(#009346 -10%, #00d464, #009346 110%);
   color: white;
   -webkit-transition: 0.3s ease-in-out;
   -moz-transition: 0.3s ease-in-out;
@@ -871,6 +873,7 @@ a.next::before {
   color: #22ac38;
 }
 .person a:hover h4 {
+  color: #22ac38;
   border-top: 1px solid #22ac38;
 }
 .person ul {
